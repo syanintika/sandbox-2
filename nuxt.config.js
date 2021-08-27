@@ -8,7 +8,51 @@ export default {
       { hid: "description", name: "description", content: "" },
       { name: "format-detection", content: "telephone=no" }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        type: "text/css",
+        href:
+          "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      },
+      {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      },
+      {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "/assets/css/style.css"
+      },
+      {
+        rel: "stylesheet",
+        type: "text/css",
+        href: "/assets/css/components.css"
+      }
+    ],
+    script: [
+      { src: "https://code.jquery.com/jquery-3.3.1.min.js" },
+      {
+        src:
+          "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      },
+      {
+        src:
+          "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      },
+      {
+        src:
+          "https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"
+      },
+      {
+        src: "/assets/js/stisla.js"
+      },
+      {
+        src: "/assets/js/scripts.js"
+      }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
