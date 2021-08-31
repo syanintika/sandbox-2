@@ -8,21 +8,39 @@
         <a href="index.html">St</a>
       </div>
       <ul class="sidebar-menu">
-        <li class="menu-header">Dashboard</li>
-        <li class="nav-item dropdown">
-          <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
-          <ul class="dropdown-menu">
-            <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
-            <li><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
-          </ul>
-        </li>
-        <li>
-          <nuxt-link class="nav-link" to="/"><i class="far fa-square"></i> <span>Dashboard</span></nuxt-link>
-        </li>
-        <li>
-          <nuxt-link class="nav-link" to="/users"><i class="far fa-square"></i> <span>User</span></nuxt-link>
+        <li v-for="(menu,i) in listMenu" :key="i">
+          <nuxt-link class="nav-link" :to="menu.to">
+            <i :class="menu.icon"></i> <span>{{menu.name}}</span>
+          </nuxt-link>
         </li>
       </ul>
     </aside>
   </div>
-</template>
+</template> 
+
+<script>
+export default {
+  data() {
+    return {
+      listMenu: [
+        {
+          name: "Dashboard baru",
+          icon: "fas fa-home",
+          to: "/",
+        },
+        {
+          name: "Semua Kelas",
+          icon: "fas fa-igloo",
+          to: "/semua-kelas",
+        },
+
+        {
+          name: "Kelas saya",
+          icon: "far fa-bookmark",
+          to: "/kelas-saya",
+        },
+      ],
+    };
+  },
+};
+</script>
