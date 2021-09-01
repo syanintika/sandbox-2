@@ -33,11 +33,30 @@ export default {
           icon: "fas fa-igloo",
           to: "/semua-kelas",
         },
-
         {
           name: "Kelas saya",
           icon: "far fa-bookmark",
           to: "/kelas-saya",
+        },
+        {
+          name: "Data Binding",
+          icon: "fas fa-book",
+          to: "/example/data-binding",
+        },
+        {
+          name: "Methods",
+          icon: "fas fa-book",
+          to: "/example/methods",
+        },
+        {
+          name: "Computed",
+          icon: "fas fa-book",
+          to: "/example/computed",
+        },
+        {
+          name: "Watcher",
+          icon: "fas fa-book",
+          to: "/example/watcher",
         },
       ],
     };
