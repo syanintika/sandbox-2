@@ -58,6 +58,11 @@ export default {
           icon: "fas fa-book",
           to: "/example/watcher",
         },
+        {
+          name: "Emit",
+          icon: "fas fa-book",
+          to: "/example/emit",
+        },
       ],
     };
   },

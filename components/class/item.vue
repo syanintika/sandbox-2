@@ -1,10 +1,11 @@
 <template>
   <div class="card">
-    <!-- <img src="..." class="card-img-top" alt="..."> -->
+    <img :src="img" class="card-img-top" :alt="'foto ' +name">
     <div class="card-body">
       <h5 class="card-title">{{name}}</h5>
       <p class="card-text">{{desc}}</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <button v-if="!unfollow" type="button" class="btn btn-primary" @click="followClass">Follow</button>
+      <button v-else type="button" class="btn btn-outline-danger" @click="followClass">Unfollow</button>
     </div>
   </div>
 </template>
@@ -18,6 +19,25 @@ export default {
     desc: {
       type: String,
       default: "Ini deskripsi kelasnya ya",
+    },
+    img: {
+      type: String,
+      default: "https://shiftacademy.id/wp-content/uploads/2021/09/1.png",
+    },
+    unfollow: {
+      type: Boolean,
+      default: false,
+    },
+  },
+  methods: {
+    followClass() {
+      const data = {
+        name: this.name,
+        desc: this.desc,
+        img: this.img,
+      };
+      if (this.unfollow) this.$emit("unfollow-class", data);
+      else this.$emit("follow-class", data);
     },
   },
 };
