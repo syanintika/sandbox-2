@@ -20,3 +20,10 @@
     </div>
   </div>
 </template>
+<script>
+import PartialsSidebar from "../components/partials/sidebar.vue";
+import PartialsNavbar from "../components/partials/navbar.vue";
+export default {
+  components: { PartialsSidebar, PartialsNavbar },
+};
+</script>

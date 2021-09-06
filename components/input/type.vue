@@ -1,16 +1,17 @@
 <template>
-  <div class="row">
+  <div class="row my-2">
     <div class="col-md-3">
-      <label for="">Input</label>
+      <label class="text-capitalize" for="">{{name}}</label>
     </div>
     <div class="col-md-9">
-      <input type="text" v-model="val" class="form-control">
+      <input type="text" v-model="val" class="form-control" :placeholder="'Masukkan '+name">
     </div>
   </div>
 </template>
 <script>
 export default {
   props: {
+    name: { type: String, default: "input" },
     value: { type: String, default: "" },
   },
   computed: {
@@ -19,14 +20,8 @@ export default {
         return this.value;
       },
       set(value) {
-        this.editValue(value);
+        this.$emit("get", value);
       },
-    },
-  },
-  methods: {
-    editValue(value) {
-      console.log(value);
-      this.$emit("get", value);
     },
   },
 };

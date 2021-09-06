@@ -27,6 +27,7 @@ export default {
           name: "Dashboard baru",
           icon: "fas fa-home",
           to: "/",
+          role: ["admin", "tutor"],
         },
         {
           name: "Semua Kelas",
@@ -37,6 +38,11 @@ export default {
           name: "Kelas saya",
           icon: "far fa-bookmark",
           to: "/kelas-saya",
+        },
+        {
+          name: "Layout",
+          icon: "fas fa-book",
+          to: "/example/layout-clean",
         },
         {
           name: "Data Binding",
@@ -62,6 +68,11 @@ export default {
           name: "Emit",
           icon: "fas fa-book",
           to: "/example/emit",
+        },
+        {
+          name: "Emit II",
+          icon: "fas fa-book",
+          to: "/example/emit-2",
         },
       ],
     };

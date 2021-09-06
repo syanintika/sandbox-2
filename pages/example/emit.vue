@@ -3,14 +3,6 @@
     <h1>Belajar EMIT</h1>
     <section class="my-5">
       <input-type :value="name" @get="(val)=>name=val" />
-      <input-type :value="name" @get="(val)=>name=val" />
-      <input-type :value="name" @get="(val)=>name=val" />
-      <input-type :value="name" @get="(val)=>name=val" />
-      <input-type :value="name" @get="(val)=>name=val" />
-      <input-type :value="name" @get="(val)=>name=val" />
-      <input-type :value="name" @get="(val)=>name=val" />
-      <input-type :value="name" @get="(val)=>name=val" />
-      <input-type :value="name" @get="(val)=>name=val" />
     </section>
     {{name}}
     <hr>
