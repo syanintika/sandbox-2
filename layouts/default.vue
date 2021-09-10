@@ -25,5 +25,11 @@ import PartialsSidebar from "../components/partials/sidebar.vue";
 import PartialsNavbar from "../components/partials/navbar.vue";
 export default {
   components: { PartialsSidebar, PartialsNavbar },
+  middleware({ store, redirect }) {
+    // If the user is not authenticated
+    if (!store.state.auth.loggedIn) {
+      return redirect("/login");
+    }
+  },
 };
 </script>

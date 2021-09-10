@@ -73,8 +73,38 @@ export default {
     "@nuxtjs/axios",
     // https://go.nuxtjs.dev/pwa
     "@nuxtjs/pwa",
-    "vue-sweetalert2/nuxt"
+    "vue-sweetalert2/nuxt",
+    "@nuxtjs/auth-next"
   ],
+  router: {
+    middleware: ["auth"]
+  },
+  auth: {
+    strategies: {
+      local: {
+        token: {
+          property: "token",
+          global: true,
+          type: false
+        },
+        user: {
+          property: "data"
+          // autoFetch: true
+        },
+        endpoints: {
+          login: {
+            url: "https://service-classroom.herokuapp.com/api/login",
+            method: "post"
+          },
+          logout: false,
+          user: {
+            url: "https://service-classroom.herokuapp.com/api/users/me",
+            method: "get"
+          }
+        }
+      }
+    }
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
