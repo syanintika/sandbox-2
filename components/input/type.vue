@@ -4,7 +4,7 @@
       <label class="text-capitalize" for="">{{name}}</label>
     </div>
     <div class="col-md-9">
-      <input type="text" v-model="val" class="form-control" :placeholder="'Masukkan '+name">
+      <input :type="type" v-model="val" class="form-control" :placeholder="'Masukkan '+name">
     </div>
   </div>
 </template>
@@ -13,6 +13,7 @@ export default {
   props: {
     name: { type: String, default: "input" },
     value: { type: String, default: "" },
+    type: { type: String, default: "text" },
   },
   computed: {
     val: {

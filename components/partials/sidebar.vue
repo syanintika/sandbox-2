@@ -74,6 +74,11 @@ export default {
           icon: "fas fa-book",
           to: "/example/emit-2",
         },
+        {
+          name: "Http Request",
+          icon: "fas fa-book",
+          to: "/example/http-request",
+        },
       ],
     };
   },

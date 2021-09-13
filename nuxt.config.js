@@ -70,8 +70,8 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    "@nuxtjs/axios",
     // https://go.nuxtjs.dev/pwa
+    "@nuxtjs/axios",
     "@nuxtjs/pwa",
     "vue-sweetalert2/nuxt",
     "@nuxtjs/auth-next"
@@ -107,7 +107,9 @@ export default {
   },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
+  axios: {
+    baseURL: "https://service-classroom.herokuapp.com"
+  },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
@@ -117,9 +119,5 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
-  server: {
-    host: "0",
-    port: 8000 // default: 3000
-  }
+  build: {}
 };
