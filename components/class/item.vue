@@ -6,12 +6,22 @@
       <p class="card-text">{{desc}}</p>
       <button v-if="!unfollow" type="button" class="btn btn-primary" @click="followClass">Follow</button>
       <button v-else type="button" class="btn btn-outline-danger" @click="followClass">Unfollow</button>
+      <i class="fas fa-trash" @click="confirmDelete"></i>
     </div>
   </div>
 </template>
 <script>
+import request from "../../mixins/request.vue";
+import { currency } from "../../mixins/script";
 export default {
+  mounted() {
+    currency();
+  },
+  mixins: [request],
   props: {
+    id: {
+      type: Number,
+    },
     name: {
       type: String,
       default: "Nama Kelas",
@@ -30,6 +40,19 @@ export default {
     },
   },
   methods: {
+    async confirmDelete() {
+      // const confirm =await this.$swal({
+      //   icon: "question",
+      //   title: "Are you sure?",
+      //   text: message,
+      //   showCancelButton: true,
+      // });
+      const confirm = await this.confirm("Delete " + this.name + " class");
+      if (confirm.isConfirmed) {
+        await this.requestDelete("api/class/" + this.id);
+        this.$emit("refresh");
+      }
+    },
     followClass() {
       const data = {
         name: this.name,
