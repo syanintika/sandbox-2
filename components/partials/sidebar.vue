@@ -13,6 +13,11 @@
             <i :class="menu.icon"></i> <span>{{menu.name}}</span>
           </nuxt-link>
         </li>
+        <li v-for="(item,i) in listClass" :key="i">
+          <nuxt-link class="nav-link" :to="'/example/http-request/'+item.id">
+            <i class="far fa-bookmark"></i> <span>{{item.name}}</span>
+          </nuxt-link>
+        </li>
       </ul>
     </aside>
   </div>
@@ -20,6 +25,11 @@
 
 <script>
 export default {
+  computed: {
+    listClass() {
+      return this.$store.state.class.listClass;
+    },
+  },
   data() {
     return {
       listMenu: [
@@ -78,6 +88,11 @@ export default {
           name: "Http Request",
           icon: "fas fa-book",
           to: "/example/http-request",
+        },
+        {
+          name: "State Management",
+          icon: "fas fa-book",
+          to: "/example/state-management",
         },
       ],
     };
