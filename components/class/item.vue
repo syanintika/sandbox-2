@@ -1,8 +1,12 @@
 <template>
   <div class="card">
-    <img :src="img" class="card-img-top" :alt="'foto ' +name">
+    <nuxt-link :to="`/example/http-request/${id}`">
+      <img :src="img" class="card-img-top" :alt="'foto ' +name">
+    </nuxt-link>
     <div class="card-body">
-      <h5 class="card-title">{{name}}</h5>
+      <nuxt-link :to="`/example/http-request/${id}`">
+        <h5 class="card-title">{{name}}</h5>
+      </nuxt-link>
       <p class="card-text">{{desc}}</p>
       <button v-if="!unfollow" type="button" class="btn btn-primary" @click="followClass">Follow</button>
       <button v-else type="button" class="btn btn-outline-danger" @click="followClass">Unfollow</button>
