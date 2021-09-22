@@ -6,8 +6,10 @@
             <button class="btn btn-primary" type="submit" style="right:20px;bottom:80px;z-index:999999" @click="addList"> + </button>
             <hr>
             <p>to do list:</p>
+            <li></li>
             <hr>
             <p>list done:</p>
+            <li></li>
         </div>
     </div>
 </template>
