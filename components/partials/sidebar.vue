@@ -33,66 +33,71 @@ export default {
   data() {
     return {
       listMenu: [
+        // {
+        //   name: "Dashboard baru",
+        //   icon: "fas fa-home",
+        //   to: "/",
+        //   role: ["admin", "tutor"],
+        // },
+        // {
+        //   name: "Semua Kelas",
+        //   icon: "fas fa-igloo",
+        //   to: "/semua-kelas",
+        // },
+        // {
+        //   name: "Kelas saya",
+        //   icon: "far fa-bookmark",
+        //   to: "/kelas-saya",
+        // },
+        // {
+        //   name: "Layout",
+        //   icon: "fas fa-book",
+        //   to: "/example/layout-clean",
+        // },
+        // {
+        //   name: "Data Binding",
+        //   icon: "fas fa-book",
+        //   to: "/example/data-binding",
+        // },
+        // {
+        //   name: "Methods",
+        //   icon: "fas fa-book",
+        //   to: "/example/methods",
+        // },
+        // {
+        //   name: "Computed",
+        //   icon: "fas fa-book",
+        //   to: "/example/computed",
+        // },
+        // {
+        //   name: "Watcher",
+        //   icon: "fas fa-book",
+        //   to: "/example/watcher",
+        // },
+        // {
+        //   name: "Emit",
+        //   icon: "fas fa-book",
+        //   to: "/example/emit",
+        // },
+        // {
+        //   name: "Emit II",
+        //   icon: "fas fa-book",
+        //   to: "/example/emit-2",
+        // },
+        // {
+        //   name: "Http Request",
+        //   icon: "fas fa-book",
+        //   to: "/example/http-request",
+        // },
+        // {
+        //   name: "State Management",
+        //   icon: "fas fa-book",
+        //   to: "/example/state-management",
+        // },
         {
-          name: "Dashboard baru",
-          icon: "fas fa-home",
-          to: "/",
-          role: ["admin", "tutor"],
-        },
-        {
-          name: "Semua Kelas",
-          icon: "fas fa-igloo",
-          to: "/semua-kelas",
-        },
-        {
-          name: "Kelas saya",
-          icon: "far fa-bookmark",
-          to: "/kelas-saya",
-        },
-        {
-          name: "Layout",
+          name: "SANDBOX",
           icon: "fas fa-book",
-          to: "/example/layout-clean",
-        },
-        {
-          name: "Data Binding",
-          icon: "fas fa-book",
-          to: "/example/data-binding",
-        },
-        {
-          name: "Methods",
-          icon: "fas fa-book",
-          to: "/example/methods",
-        },
-        {
-          name: "Computed",
-          icon: "fas fa-book",
-          to: "/example/computed",
-        },
-        {
-          name: "Watcher",
-          icon: "fas fa-book",
-          to: "/example/watcher",
-        },
-        {
-          name: "Emit",
-          icon: "fas fa-book",
-          to: "/example/emit",
-        },
-        {
-          name: "Emit II",
-          icon: "fas fa-book",
-          to: "/example/emit-2",
-        },
-        {
-          name: "Http Request",
-          icon: "fas fa-book",
-          to: "/example/http-request",
-        },
-        {
-          name: "State Management",
-          icon: "fas fa-book",
-          to: "/example/state-management",
+          to: "/sandbox",
         },
       ],
     };
